@@ -11,7 +11,7 @@
 class sphere : hittable {
 public:
 
-    point3 centar;
+    point3 center;
     double radius;
 
     sphere();

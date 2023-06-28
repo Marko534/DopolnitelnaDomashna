@@ -9,7 +9,7 @@ sphere::sphere() {
 }
 
 sphere::sphere(point3 cen, double r) {
-    centar = cen;
+    center = cen;
     radius = r;
 }
 
@@ -35,5 +35,5 @@ bool sphere::hit(const ray &r, double t_min, double t_max, hit_record &rec) cons
 
     rec.t = root;
     rec.p = r.at(rec.t);
-    rec.normal = (rec.p - centar) / radius;
+    rec.normal = (rec.p - center) / radius;
 }
