@@ -58,7 +58,7 @@ vec3 &vec3::operator/=(const double t) {
     return *this*=1/t;
 }
 
-double vec3::lenght() const {
+double vec3::length() const {
     return sqrt(length_squared());
 }
 
@@ -66,7 +66,3 @@ double vec3::length_squared() const {
     return e[0]*e[0] + e[1]*e[1] + e[2]*e[2];
 }
 
-//This may not work
-inline std::ostream& operator<<(std::ostream &out, vec3 &v){
-    return out << v.e[0] << ' ' << v.e[1] << ' ' << v.e[2];
-}
