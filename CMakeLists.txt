@@ -3,4 +3,4 @@ project(HOMEWORK_HELL)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(HOMEWORK_HELL main.cpp vec3.cpp vec3.hpp color.hpp)
+add_executable(HOMEWORK_HELL src/main.cpp src/vec3.cpp include/vec3.hpp include/color.hpp)
