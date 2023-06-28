@@ -1,10 +1,14 @@
 #include <iostream>
 #include <fstream>
+#include <string>
+
+const std::string FILE_OUTPUT = "../output.ppm";
 
 int main() {
     //Makeing a file
 
-    std::ofstream file("output.ppm");
+    std::ofstream file(FILE_OUTPUT);
+
     if (!file) {
         std::cerr << "Error opening file for writing." << std::endl;
         return 1;
