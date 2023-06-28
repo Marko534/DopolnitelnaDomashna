@@ -8,7 +8,7 @@
 #include "hittable.hpp"
 #include "vec3.hpp"
 
-class sphere : hittable {
+class sphere : public hittable {
 public:
 
     point3 center;
