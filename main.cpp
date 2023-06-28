@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include "vec3.hpp"
 
 const std::string FILE_OUTPUT = "../output.ppm";
 
@@ -38,4 +39,5 @@ int main() {
         }
     }
     std::cerr << "\nDone.\n";
+
 }

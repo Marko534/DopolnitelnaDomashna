@@ -10,7 +10,6 @@
 
 using std::sqrt;
 
-
 class vec3 {
 public:
     double e[3]{};
@@ -38,5 +37,7 @@ public:
 
 using point3 = vec3;
 using color = vec3;
+
+//inline std::ostream& operator<<(std::ostream &out, vec3 &v);
 
 #endif //VEC3_HPP

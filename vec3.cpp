@@ -4,7 +4,6 @@
 
 #include "vec3.hpp"
 
-
 // Type aliases for vec3
 using point3 = vec3;   // 3D point
 using color = vec3;    // RGB color
@@ -67,3 +66,7 @@ double vec3::length_squared() const {
     return e[0]*e[0] + e[1]*e[1] + e[2]*e[2];
 }
 
+//This may not work
+inline std::ostream& operator<<(std::ostream &out, vec3 &v){
+    return out << v.e[0] << ' ' << v.e[1] << ' ' << v.e[2];
+}
