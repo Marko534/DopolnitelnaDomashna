@@ -1,8 +1,9 @@
+#include "vec3.hpp"
+#include "color.hpp"
+
 #include <iostream>
 #include <fstream>
 #include <string>
-#include "vec3.hpp"
-
 const std::string FILE_OUTPUT = "../output.ppm";
 
 int main() {
@@ -24,24 +25,13 @@ int main() {
 
     file << "P3\n" << image_width << ' ' << image_height << "\n255\n";
 
-//    for (int j = image_height-1; j >= 0; --j) {
-//        for (int i = 0; i < image_width; ++i) {
-////            std::cerr << "\rScanlines remaining: " << j << ' ' << std::flush;
-//            auto r = double(i) / (image_width-1);
-//            auto g = double(j) / (image_height-1);
-//            auto b = 0.25;
-//
-//            int ir = static_cast<int>(255.999 * r);
-//            int ig = static_cast<int>(255.999 * g);
-//            int ib = static_cast<int>(255.999 * b);
-//
-//            file << ir << ' ' << ig << ' ' << ib << '\n';
-//        }
-//    }
-
-    vec3 v0(1 ,2 ,3);
-    vec3 v1(3,2,1);
-    std::cout << dot(v0, v1);
+    for (int j = image_height-1; j >= 0; --j) {
+        std::cerr << "\rScanlines remaining: " << j << ' ' << std::flush;
+        for (int i = 0; i < image_width; ++i) {
+            color pixel_color(double(i)/(image_width-1), double(j)/(image_height-1),0.25f);
+            write_color(file, pixel_color);
+        }
+    }
     std::cerr << "\nDone.\n";
 
 }
