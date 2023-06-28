@@ -13,7 +13,7 @@ using std::sqrt;
 
 class vec3 {
 public:
-    double e[3];
+    double e[3]{};
 
     vec3();
 
@@ -23,14 +23,14 @@ public:
     double y() const;
     double z() const;
 
-    vec3 &operator-();
+    vec3 operator-();
 
     double operator[](int i) const;
     double &operator[](int i);
 
     vec3 &operator+=(const vec3 &v);
-    vec3 &operator*=(const vec3 &v);
-    vec3 &operator/=(const vec3 &v);
+    vec3 &operator*=(const double t);
+    vec3 &operator/=(const double t);
 
     double lenght() const;
     double length_squared() const;
@@ -39,5 +39,4 @@ public:
 using point3 = vec3;
 using color = vec3;
 
-
-#endif //VEC3_H
+#endif //VEC3_HPP
