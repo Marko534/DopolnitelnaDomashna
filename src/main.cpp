@@ -11,7 +11,7 @@ const std::string FILE_OUTPUT = "../output.ppm";
 color ray_color(const ray& r){
     vec3 unit_direction = unit_vector(r.direction());
     double t = 0.5*(unit_direction.y()+1);
-    return (1.0f-t)*color (1.0f, 1.0f, 1.0f) + t*color (0.5f,0.7f, 1.0f);
+    return (1.0f-t)*color (1.0,0.0,1.0) + t*color (0.0f, 0.0f, 0.0f);
 }
 
 int main() {
