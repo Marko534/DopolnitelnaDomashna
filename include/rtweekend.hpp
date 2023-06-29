@@ -38,6 +38,16 @@ inline double random_double(double min, double max){
     return min + (max-min)*random_double();
 }
 
+inline double clamp( double x, double max, double min){
+    if(x<min){
+        return min;
+    } else if (x>max){
+        return max;
+    } else{
+        return x;
+    }
+}
+
 #include "ray.hpp"
 #include "vec3.hpp"
 

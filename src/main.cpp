@@ -40,10 +40,6 @@ int main() {
 
     // Camera
 
-    double viewport_height  = 2.0f;
-    double viewport_width = aspect_ratio * viewport_height;
-    double focal_length = 1.0;
-
     vec3 origin = point3 (0,0,0);
     vec3 horizontal = vec3(viewport_width, 0, 0);
     vec3 vertical = vec3(0 , viewport_height,0);
