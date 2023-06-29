@@ -35,10 +35,10 @@ public:
     double length() const;
     double length_squared() const;
 
-    inline static vec3 random();
-    inline static vec3 random(double min, double max);
 
     bool near_zero();
+    inline static vec3 random();
+    inline static vec3 random(double min, double max);
 
 };
 
