@@ -5,6 +5,7 @@
 #ifndef VEC3_HPP
 #define VEC3_HPP
 
+#include "rtweekend.hpp"
 #include <cmath>
 #include <iostream>
 
@@ -33,6 +34,9 @@ public:
 
     double length() const;
     double length_squared() const;
+
+    inline static vec3 random();
+    inline static vec3 random(double  min, double max);
 };
 
 using point3 = vec3;
@@ -87,6 +91,16 @@ inline vec3 cross(const vec3 &u, const vec3 &v) {
 
 inline vec3 unit_vector(vec3 v) {
     return v / v.length();
+}
+
+vec3 random_in_unit_sphere(){
+    while (true){
+        vec3 p = vec3::random(-1,1);
+        if(p.length_squared() >=1){
+            continue;
+        }
+        return p;
+    }
 }
 
 #endif //VEC3_HPP
