@@ -76,6 +76,7 @@ vec3 vec3::random(double min, double max) {
 
 bool vec3::near_zero() {
     const double  s = 1e-8;
+    return (fabs(e[0]) < s) && (fabs(e[1]) < s) && (fabs(e[2]) < s);
 }
 
 vec3 random_in_unit_sphere() {
