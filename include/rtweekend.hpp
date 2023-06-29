@@ -8,7 +8,6 @@
 #include <cmath>
 #include <limits>
 #include <memory>
-#include <cstdlib>
 
 // Usings
 
@@ -29,15 +28,6 @@ inline double degrees_to_radians(double degrees) {
 
 // Common Headers
 
-//Random numb [0,1)
-inline double random_double(){
-    return rand()/(RAND_MAX+1.0f);
-}
-
-inline double random_double(double min, double max){
-    return min + (max-min)*random_double();
-}
-
 inline double clamp( double x, double min, double max){
     if(x<min){
         return min;
@@ -48,6 +38,7 @@ inline double clamp( double x, double min, double max){
     }
 }
 
+#include "random.hpp"
 #include "ray.hpp"
 #include "vec3.hpp"
 
