@@ -39,6 +39,7 @@ public:
     inline static vec3 random(double  min, double max);
 };
 
+
 using point3 = vec3;
 using color = vec3;
 
