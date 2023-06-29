@@ -5,11 +5,17 @@
 #ifndef HOMEWORK_HELL_HITTABLE_HPP
 #define HOMEWORK_HELL_HITTABLE_HPP
 
-#include "ray.hpp"
+//MAY NEED TO INCLUDE RAY
+//#include "ray.hpp"
+
+#include "rtweekend.hpp"
+
+class material;
 
 struct hit_record {
     point3 p;
     vec3 normal;
+    shared_ptr<material> mat_ptr;
     double t;
     bool front_face;
 
