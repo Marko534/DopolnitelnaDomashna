@@ -39,4 +39,14 @@ public:
     ) const override;
 };
 
+class dielectric : public material{
+public:
+    double ir; //Index of Refraction
+
+    dielectric(double index_of_refraction);
+    virtual bool scatter(
+            const ray& r_in, const hit_record& rec, color& attenuation, ray& scattered
+    ) const override;
+};
+
 #endif //HOMEWORK_HELL_MATERIAL_HPP
