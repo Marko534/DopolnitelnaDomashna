@@ -6,14 +6,25 @@
 #define HOMEWORK_HELL_MATERIAL_HPP
 
 #include "rtweekend.hpp"
-
-struct hit_record;
+//MAY NEED TO CHANGE IT
+#include "hittable.hpp"
 
 class material {
 public:
     virtual bool scatter(
             const ray& r_in, const hit_record& rec, color& attenuation, ray& scattered
     ) const = 0;
+};
+
+class lambertian : public material {
+public:
+    color albedo;
+public:
+    lambertian(const color& a);
+
+    virtual bool scatter(
+            const ray& r_in, const hit_record& rec, color& attenuation, ray& scattered
+    ) const override;
 };
 
 #endif //HOMEWORK_HELL_MATERIAL_HPP
