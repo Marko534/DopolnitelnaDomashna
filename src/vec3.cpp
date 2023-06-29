@@ -78,6 +78,10 @@ bool vec3::near_zero() {
     const double  s = 1e-8;
 }
 
+vec3 vec3::reflect(const vec3 &v, const vec3 &n) {
+    return v - 2*dot(v,n)*n;
+}
+
 
 vec3 random_in_unit_sphere() {
     while (true) {

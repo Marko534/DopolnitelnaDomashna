@@ -39,6 +39,8 @@ public:
     inline static vec3 random(double min, double max);
 
     bool near_zero();
+
+    vec3 reflect(const vec3& v, const vec3& n);
 };
 
 using point3 = vec3;
