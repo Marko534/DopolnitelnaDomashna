@@ -14,7 +14,10 @@ private:
     vec3 horizontal;
     vec3 vertical;
 public:
-    camera();
+    camera(
+            double vfov, // vertical field-of-view in degrees
+            double aspect_ratio
+    );
 
     ray get_ray(double u, double v) const;
 };
