@@ -30,8 +30,9 @@ public:
 class metal : public material{
 public:
     color albedo;
+    double fuzzy;
 
-    metal (const color& a);
+    metal (const color& a, double f);
 
     virtual bool scatter(
             const ray& r_in, const hit_record& rec, color& attenuation, ray& scattered

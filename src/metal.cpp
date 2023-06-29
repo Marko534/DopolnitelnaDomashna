@@ -4,7 +4,8 @@
 
 #include "../include/material.hpp"
 
-metal::metal(const color &a) {
+metal::metal(const color &a, double f) {
+    fuzzy = f;
     albedo = a;
 }
 
@@ -12,7 +13,7 @@ bool metal::scatter(const ray &r_in, const hit_record &rec, color &attenuation, 
 
     vec3 reflected = reflect(unit_vector(r_in.direction()), rec.normal);
 
-    scattered = ray(rec.p, reflected);
+    scattered = ray(rec.p, reflected + fuzzy*random_in_unit_sphere());
     attenuation =albedo;
     return (dot(scattered.direction(), rec.normal)>0);
 }
