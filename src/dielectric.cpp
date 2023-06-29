@@ -9,7 +9,7 @@ dielectric::dielectric(double index_of_refraction){
 }
 
 bool dielectric::scatter(const ray &r_in, const hit_record &rec, color &attenuation, ray &scattered) const {
-    attenuation = color(1.0,1.0,1.0);
+    attenuation = color(1.0, 1.0, 1.0);
     double refraction_ratio = rec.front_face ? (1.0/ir) : ir;
 
     vec3 unit_direction = unit_vector(r_in.direction());
