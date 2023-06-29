@@ -15,11 +15,14 @@ private:
     vec3 vertical;
 public:
     camera(
+            point3 lookfrom,
+            point3 lookat,
+            vec3   vup,
             double vfov, // vertical field-of-view in degrees
             double aspect_ratio
     );
 
-    ray get_ray(double u, double v) const;
+    ray get_ray(double s, double t) const;
 };
 
 
