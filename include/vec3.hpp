@@ -94,5 +94,6 @@ inline vec3 unit_vector(vec3 v) {
 }
 
 vec3 random_in_unit_sphere();
+vec3 random_unit_vector();
 
 #endif //VEC3_HPP
