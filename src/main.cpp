@@ -28,7 +28,9 @@ color ray_color(const ray& r, const hittable& world, int depth) {
     }
     vec3 unit_direction = unit_vector(r.direction());
     double t = 0.5*(unit_direction.y()+1);
-    return (1.0f-t)*color (0.549, 0.033, 0.418) + t*color (0.0, 0.0, 0.0);
+    return (1.0f-t)*color (1.0, 1.0, 1.0) + t*color (0.5, 0.7, 1.0);
+    // the cooler colors
+    // return (1.0f-t)*color (0.549, 0.033, 0.418) + t*color (0.0, 0.0, 0.0);
 }
 int main() {
     //Makeing a file
