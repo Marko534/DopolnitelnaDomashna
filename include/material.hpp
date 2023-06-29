@@ -27,4 +27,15 @@ public:
     ) const override;
 };
 
+class metal : public material{
+public:
+    color albedo;
+
+    metal (const color& a);
+
+    virtual bool scatter(
+            const ray& r_in, const hit_record& rec, color& attenuation, ray& scattered
+    ) const override;
+};
+
 #endif //HOMEWORK_HELL_MATERIAL_HPP
