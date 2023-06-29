@@ -37,6 +37,8 @@ public:
 
     inline static vec3 random();
     inline static vec3 random(double min, double max);
+
+    bool near_zero();
 };
 
 using point3 = vec3;

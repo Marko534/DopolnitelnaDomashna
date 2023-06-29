@@ -74,6 +74,10 @@ vec3 vec3::random(double min, double max) {
     return vec3(random_double(min,max), random_double(min,max), random_double(min,max));
 }
 
+bool vec3::near_zero() {
+    const double  s = 1e-8;
+}
+
 
 vec3 random_in_unit_sphere() {
     while (true) {
