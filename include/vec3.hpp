@@ -37,9 +37,12 @@ public:
 
 
     bool near_zero();
-    inline static vec3 random();
-    inline static vec3 random(double min, double max);
-
+    inline static vec3 random(){
+        return vec3(random_double(), random_double(), random_double());
+    }
+    inline static vec3 random(double min, double max){
+        return vec3(random_double(min,max), random_double(min,max), random_double(min,max));
+    }
 };
 
 using point3 = vec3;

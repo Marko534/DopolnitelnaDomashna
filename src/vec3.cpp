@@ -65,14 +65,14 @@ double vec3::length() const {
 double vec3::length_squared() const {
     return e[0]*e[0] + e[1]*e[1] + e[2]*e[2];
 }
-
-vec3 vec3::random() {
-    return vec3(random_double(), random_double(), random_double());
-}
-
-vec3 vec3::random(double min, double max) {
-    return vec3(random_double(min,max), random_double(min,max), random_double(min,max));
-}
+//
+//vec3 vec3::random() {
+//    return vec3(random_double(), random_double(), random_double());
+//}
+//
+//vec3 vec3::random(double min, double max) {
+//    return vec3(random_double(min,max), random_double(min,max), random_double(min,max));
+//}
 
 bool vec3::near_zero() {
     const double  s = 1e-8;
