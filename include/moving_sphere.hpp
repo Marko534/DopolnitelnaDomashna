@@ -9,7 +9,7 @@
 
 #include "hittable.hpp"
 
-class moving_sphere : public hittable{
+class moving_sphere : public hittable {
 public:
     point3 center0, center1;
     double time0, time1;
@@ -22,7 +22,7 @@ public:
                   const shared_ptr<material> &matPtr);
 
     virtual bool hit(
-            const ray& r, double t_min, double t_max, hit_record& rec) const override;
+            const ray &r, double t_min, double t_max, hit_record &rec) const override;
 
     point3 center(double time) const;
 };

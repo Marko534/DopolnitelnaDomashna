@@ -14,10 +14,13 @@ public:
     double tm;
 
     ray();
-    ray(const point3& origin, const vec3& direction, double time = 0.0f);
+
+    ray(const point3 &origin, const vec3 &direction, double time = 0.0f);
 
     point3 origin() const;
+
     vec3 direction() const;
+
     double time() const;
 
     point3 at(double t) const;

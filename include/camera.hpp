@@ -20,12 +20,12 @@ public:
     camera(
             point3 lookfrom,
             point3 lookat,
-            vec3   vup,
+            vec3 vup,
             double vfov, // vertical field-of-view in degrees
             double aspect_ratio,
             double aperture,
             double focus_dist,
-            double _time0=0.0f,
+            double _time0 = 0.0f,
             double _time1 = 0.0f
     );
 

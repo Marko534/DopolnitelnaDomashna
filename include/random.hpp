@@ -8,12 +8,12 @@
 #include <cstdlib>
 
 //Random numb [0,1)
-inline double random_double(){
-    return rand()/(RAND_MAX+1.0f);
+inline double random_double() {
+    return rand() / (RAND_MAX + 1.0f);
 }
 
-inline double random_double(double min, double max){
-    return min + (max-min)*random_double();
+inline double random_double(double min, double max) {
+    return min + (max - min) * random_double();
 }
 
 #endif //HOMEWORK_HELL_RANDOM_HPP

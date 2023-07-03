@@ -8,7 +8,7 @@ sphere::sphere() {
 
 }
 
-sphere::sphere(point3 cen, double r, shared_ptr<material> m)  {
+sphere::sphere(point3 cen, double r, shared_ptr<material> m) {
     center = cen;
     radius = r;
     mat_ptr = m;
@@ -18,18 +18,18 @@ bool sphere::hit(const ray &r, double t_min, double t_max, hit_record &rec) cons
     vec3 oc = r.origin() - center;
     double a = r.direction().length_squared();
     double half_b = dot(oc, r.direction());
-    double c = oc.length_squared() - radius*radius;
+    double c = oc.length_squared() - radius * radius;
 
-    double discriminant = half_b*half_b - a*c;
+    double discriminant = half_b * half_b - a * c;
     if (discriminant < 0) {
         return false;
     }
     double sqrtd = sqrt(discriminant);
 
-    double root = (-half_b - sqrtd) /a ;
-    if (root < t_min || t_max < root){
-        root = (-half_b - sqrtd) /a;
-        if (root < t_min || t_max < root){
+    double root = (-half_b - sqrtd) / a;
+    if (root < t_min || t_max < root) {
+        root = (-half_b - sqrtd) / a;
+        if (root < t_min || t_max < root) {
             return false;
         }
     }
