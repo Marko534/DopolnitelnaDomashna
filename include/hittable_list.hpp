@@ -5,6 +5,7 @@
 #ifndef HOMEWORK_HELL_HITTABLE_LIST_HPP
 #define HOMEWORK_HELL_HITTABLE_LIST_HPP
 
+#include "aabb.hpp"
 
 #include "hittable.hpp"
 
@@ -29,6 +30,8 @@ public:
     virtual bool hit(
             const ray &r, double t_min, double t_max, hit_record &rec) const override;
 
+    virtual bool bounding_box(
+            double time0, double time1, aabb& output_box) const override;
 };
 
 #endif //HOMEWORK_HELL_HITTABLE_LIST_HPP

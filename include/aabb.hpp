@@ -35,5 +35,5 @@ public:
     }
 };
 
-
+aabb surrounding_box(aabb box0, aabb box1);
 #endif //HOMEWORK_HELL_AABB_HPP
