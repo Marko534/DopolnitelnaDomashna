@@ -24,6 +24,8 @@ public:
     ) const override;
 
     bool bounding_box(double time0, double time1, aabb& output_box) const ;
+private:
+    static void get_sphere_uv(const point3& p, double& u, double & v);
 };
 
 

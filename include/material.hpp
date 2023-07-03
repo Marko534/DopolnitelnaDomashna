@@ -8,6 +8,7 @@
 #include "rtweekend.hpp"
 //MAY NEED TO CHANGE IT
 #include "hittable.hpp"
+#include "texture.hpp"
 
 class material {
 public:
@@ -18,9 +19,10 @@ public:
 
 class lambertian : public material {
 public:
-    color albedo;
+    shared_ptr<texture> albedo;
 public:
     lambertian(const color &a);
+    lambertian(shared_ptr<texture> a);
 
     virtual bool scatter(
             const ray &r_in, const hit_record &rec, color &attenuation, ray &scattered
