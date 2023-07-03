@@ -24,4 +24,16 @@ public:
     virtual color value(double u, double v, const vec3& p) const override;
 };
 
+class checker_texture : public texture {
+public:
+    shared_ptr<texture> odd;
+    shared_ptr<texture> even;
+
+    checker_texture();
+    checker_texture(shared_ptr<texture> _even, shared_ptr<texture> _odd);
+    checker_texture(color c1, color c2);
+
+    virtual color value (double u, double v,  const point3& p) const override;
+};
+
 #endif //HOMEWORK_HELL_TEXTURE_HPP
