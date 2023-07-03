@@ -38,6 +38,7 @@ inline double clamp(double x, double min, double max) {
     }
 }
 
+
 #include "random.hpp"
 #include "ray.hpp"
 #include "vec3.hpp"
