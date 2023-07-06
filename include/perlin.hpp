@@ -24,6 +24,7 @@ public:
     double noise(const point3& p) const;
     static double trilinear_interp(double c[2][2][2], double u, double v, double w);
     static double perlin_interp(vec3 c[2][2][2], double u, double v, double w);
+    double turb(const point3& p, int depth=7) const;
 };
 
 
