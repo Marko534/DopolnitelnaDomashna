@@ -19,6 +19,9 @@ private:
     static void permute(int* p, int n);
 
 public:
+    perlin();
+    ~perlin();
+    double noise(const point3& p) const;
 };
 
 
