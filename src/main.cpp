@@ -109,6 +109,7 @@ int main() {
     const int samples_per_pixel = 100;
     const int max_depth = 50;
 
+
     // World
     hittable_list world;
 
