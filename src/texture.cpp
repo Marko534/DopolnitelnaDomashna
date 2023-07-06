@@ -48,7 +48,11 @@ noise_texture::noise_texture() {
 }
 
 color noise_texture::value(double u, double v, const point3 &p) const {
-    return color(1,1,1)*noise.noise(p);
+    return color(1,1,1) * 0.5 * (1.0 + noise.noise(scale * p));
+}
+
+noise_texture::noise_texture(double sc) {
+    scale = sc;
 }
 
 
