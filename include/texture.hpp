@@ -6,6 +6,7 @@
 #define HOMEWORK_HELL_TEXTURE_HPP
 
 #include "rtweekend.hpp"
+#include "perlin.hpp"
 
 class texture {
 public:
@@ -35,5 +36,14 @@ public:
 
     virtual color value (double u, double v,  const point3& p) const override;
 };
+
+class noise_texture : public texture{
+public:
+    perlin noise;
+
+    noise_texture();
+    virtual color value (double u, double v, const point3& p) const override;
+};
+
 
 #endif //HOMEWORK_HELL_TEXTURE_HPP
