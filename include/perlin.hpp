@@ -22,6 +22,7 @@ public:
     perlin();
     ~perlin();
     double noise(const point3& p) const;
+    static double trilinear_interp(double c[2][2][2], double u, double v, double w);
 };
 
 
